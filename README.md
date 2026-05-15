@@ -42,7 +42,7 @@ Available in two configurations: a **local version** (reads parquet files from d
 | `bridge.py` | Stdio↔HTTP bridge connecting Claude Desktop to the cloud server via SSE |
 | `Dockerfile` | Container definition for deploying the cloud server to Google Cloud Run |
 | `requirements.txt` | All Python dependencies |
-| `.env.example` | Template for environment variables — copy to `.env` and fill in secrets |
+| `.env` | Template for environment variables — copy to `.env` and fill in secrets |
 
 ---
 
@@ -50,14 +50,14 @@ Available in two configurations: a **local version** (reads parquet files from d
 
 **1. Clone and install dependencies**
 ```bash
-git clone https://github.com/yourname/mcp-trading-server.git
+git clone https://github.com/ofekharpaz/MCP-backtesting-tool.git
 cd mcp-trading-server
 pip install -r requirements.txt
 ```
 
 **2. Set up environment**
 ```bash
-cp .env.example .env
+cp .env .env
 # Edit .env and set DATA_DIR to point to your parquet folder
 ```
 
@@ -93,7 +93,7 @@ Restart Claude Desktop — the server starts automatically. Ask Claude:
 
 **1. Configure secrets**
 ```bash
-cp .env.example .env
+cp .env .env
 # Fill in R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_ENDPOINT, SERVER_API_KEY
 ```
 
@@ -222,7 +222,7 @@ mcp-trading-server/
 ├── bridge.py                 # Stdio↔HTTP bridge for cloud mode
 ├── Dockerfile                # Cloud Run container definition
 ├── requirements.txt          # Python dependencies
-├── .env.example              # Environment variable template
+├── .env              # Environment variable template
 ├── .gitignore                # Must include .env and TestData/
 └── README.md
 ```
