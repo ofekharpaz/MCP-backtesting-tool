@@ -12,7 +12,7 @@ Available in two configurations: a **local version** (reads parquet files from d
 ┌─────────────────────────────────────────────────────────────────┐
 │                        LOCAL SETUP                              │
 │                                                                 │
-│   Claude Desktop ──stdio──► trading_server_local.py            │
+│   Claude Desktop ──stdio──► trading_server_local.py             │
 │                                     │                           │
 │                              DuckDB reads                       │
 │                              ./TestData/*.parquet               │
@@ -21,10 +21,10 @@ Available in two configurations: a **local version** (reads parquet files from d
 ┌─────────────────────────────────────────────────────────────────┐
 │                        CLOUD SETUP                              │
 │                                                                 │
-│   Claude Desktop ──stdio──► bridge.py ──HTTP/SSE──►            │
+│   Claude Desktop ──stdio──► bridge.py ──HTTP/SSE──►             │
 │                                     │                           │
 │                          Google Cloud Run                       │
-│                          trading_server.py (FastAPI + MCP)     │
+│                          trading_server.py (FastAPI + MCP)      │
 │                                     │                           │
 │                          DuckDB reads s3://quant-data-poc/      │
 │                          (Cloudflare R2)                        │
